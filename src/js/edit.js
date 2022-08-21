@@ -1,8 +1,7 @@
-import $ from 'jquery';
-var buton = document.getElementById("buton");
+import $ from "jquery"
+ 
 var allchar = "0123456789ABCDEF";
-
-buton.addEventListener("click", myFun);
+var buton = document.getElementById("buton");
 
 function myFun() {
   var randcol = "";
@@ -14,9 +13,11 @@ function myFun() {
      element.style.color="#" + randcol;
      var btn = document.getElementById("buton");
        btn.style.backgroundColor = "#" + randcol;
-
 }
+$(document).on('click', '#buton', myFun);
+
 /*-----------------------------------------------------*/
+ /*-----------------------------------------------------*/
      var quotearray =[
         " <q>Whatever the mind of man can conceive and believe, it can achieve.</q>",
         "<q>You only live once, but if you do it right, once is enough.</q>",
@@ -48,4 +49,5 @@ function myFun() {
    document.getElementById('author').innerHTML = authorarray[randNum];
 }
 
-buton.addEventListener("click", myLost);
+//buton.addEventListener("click", myLost); 
+$(document).on('click', '#buton', myLost);
